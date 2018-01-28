@@ -2,7 +2,6 @@ package com.paradigmadigital.karchitect.ui
 
 import android.app.Activity
 import android.arch.lifecycle.LifecycleRegistry
-import android.arch.lifecycle.LifecycleRegistryOwner
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import com.paradigmadigital.karchitect.injection.DaggerActivityComponent
 import com.paradigmadigital.karchitect.platform.ActivityModule
 import com.paradigmadigital.karchitect.platform.AndroidApplication
 
-open class BaseActivity : AppCompatActivity(), LifecycleRegistryOwner {
+open class BaseActivity : AppCompatActivity() {
 
     private val lifecycleRegistry = LifecycleRegistry(this)
 
